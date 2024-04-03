@@ -390,6 +390,34 @@ impl Sub for Vector3D {
 	}
 }
 
+impl Display for Point3D {
+	/// Formats the [`Point3D`] with the given formatter and prepares it for user-facing output.
+	///
+	/// The format is `(x,y,z)`.
+	///
+	/// Example:
+	/// ```rust
+	/// use simple_3d_vector::Point3D;
+	///
+	/// let point = Point3D::new(
+	///     2.2,
+	///     1.1,
+	///     0.0
+	/// );
+	///
+	/// assert_eq!(format!("{point}"), "(2.2,1.1,0)");
+	/// ```
+	fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+		write!(
+			f,
+			"({},{},{})",
+			self.x,
+			self.y,
+			self.z,
+		)
+	}
+}
+
 impl<T: Into<f64>, E: Into<f64>, M: Into<f64>> From<(T, E, M)> for Point3D {
 	fn from(value: (T, E, M)) -> Self {
 		let value: (f64, f64, f64) = (value.0.into(), value.1.into(), value.2.into());
