@@ -1,5 +1,6 @@
 [package]
 name = "simple_3d_vector"
+description = "Simple three-dimensional vectors in Rust"
 version = "0.1.0"
 edition = "2021"
 authors = ["Theboiboi8 <kamela_ae@proton.me>"]
