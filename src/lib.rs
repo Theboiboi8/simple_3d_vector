@@ -229,7 +229,7 @@ impl Vector3D {
 		);
 		self
 	}
-	
+
 	/// Returns the length of a [`Vector3D`].
 	pub fn get_magnitude(&self) -> f64 {
 		f64::sqrt(
@@ -240,7 +240,7 @@ impl Vector3D {
 				(self.origin.z - self.target.z).powf(2.0)
 		)
 	}
-	
+
 	/// Returns a [`Vector2D`] that represents the points
 	/// along a specific [`Plane`] of the input [`Vector3D`]
 	pub fn vector2d_along_plane(vector3d: &Vector3D, plane: &Plane) -> Vector2D {
@@ -342,7 +342,7 @@ impl Display for Vector3D {
 	///     Point3D::new(0.0, 1.1, 2.2),
 	/// );
 	///
-	/// assert_eq!(format!("{vector}"), "(2.2,1.1,0.0)[0.0,1.1,2.2]");
+	/// assert_eq!(format!("{vector}"), "(2.2,1.1,0)[0,1.1,2.2]");
 	/// ```
 	fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
 		write!(
