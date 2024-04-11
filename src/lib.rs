@@ -8,7 +8,7 @@ use simple_2d_vector::{Vector2D, Point2D};
 /// An enum type that defines the three planes that a [`Vector3D`] can occupy.
 ///
 /// The first plane of the vector's `origin` or `target` is its x-y plane,
-/// the second plane is its y-z plane, and its third plane is its z-z plane.
+/// the second plane is its y-z plane, and its third plane is its z-x plane.
 pub enum Plane {
 	/// The x-y plane of the vector's `origin` or `target`.
 	XY,
