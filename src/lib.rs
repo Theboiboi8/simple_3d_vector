@@ -1,9 +1,10 @@
-#[cfg(test)]
-mod tests;
-
 use std::fmt::{Display, Formatter};
 use std::ops::{Add, Sub};
-use simple_2d_vector::{Vector2D, Point2D};
+
+use simple_2d_vector::{Point2D, Vector2D};
+
+#[cfg(test)]
+mod tests;
 
 /// An enum type that defines the three planes that a [`Vector3D`] can occupy.
 ///
@@ -171,8 +172,16 @@ impl Vector3D {
 	/// This creates a new [`Vector3D`] with the same x and y coordinates as the input
 	/// [`Vector2D`], but adds the third dimension as the z coordinate
 	pub fn from_2d_vector(vector2d: Vector2D, origin_z: f64, target_z: f64) -> Self {
-		let (x,y,z) = (vector2d.origin.x, vector2d.origin.y, origin_z);
-		let (x_target,y_target,z_target) = (vector2d.target.x, vector2d.target.y, target_z);
+		let (x, y, z) = (
+			vector2d.origin.x,
+			vector2d.origin.y,
+			origin_z
+		);
+		let (x_target, y_target, z_target) = (
+			vector2d.target.x,
+			vector2d.target.y,
+			target_z
+		);
 		
 		Vector3D {
 			origin: Point3D::new(

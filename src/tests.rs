@@ -1,5 +1,6 @@
 use std::ops::{Add, Sub};
-use crate::{Vector3D, Point3D};
+
+use crate::{Point3D, Vector3D};
 
 #[test]
 fn new_vector() {
