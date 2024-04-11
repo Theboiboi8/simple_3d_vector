@@ -1,4 +1,7 @@
 # Simple 3D Vector
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/theboiboi8/simple_3d_vector?style=for-the-badge&labelColor=000000&color=dfff00)
+[![Static Badge](https://img.shields.io/badge/available-crates.io-dfff00?style=for-the-badge&label=Available%20on&labelColor=000000&color=DFFF00)](https://crates.io/crates/simple_3d_vector)
+
 Simple grid-based 3-dimensional vectors in Rust.
 
 Also provides advanced operations for working with [`simple_2d_vector`](https://crates.io/crates/simple_2d_vector)
